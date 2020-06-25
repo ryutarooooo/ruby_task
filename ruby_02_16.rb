@@ -5,4 +5,4 @@ users = [
   { name: "nakamura", age: 41 },
 ]
 
-p users.map { |na| na[:name] }
+users.each { |user| puts "私の名前は#{user[:name]}です。年齢は #{user[:age]}歳です" }
