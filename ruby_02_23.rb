@@ -12,16 +12,26 @@ end
 
 def selection_travel_plan(plans)
   puts "旅行プランを選択してください"
-  print "プランを選択 >"
 
-  plans[gets.to_i - 1]
+  while true
+    print "プランを選択 >"
+    num = gets.to_i
+    break if num >= 1 && num <= 3
+  end
+
+  plans[num - 1]
 end
 
 def selection_travel_count(selected_plan)
   puts "#{selected_plan[:place]}旅行ですね、何人で行きますか?"
-  print "人数を入力 >"
 
-  gets.to_i
+  while true
+    print "人数を入力 >"
+    count = gets.to_i
+    break if count >= 1
+  end
+
+  count
 end
 
 def total_price_output(selected_plan, count)
