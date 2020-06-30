@@ -3,4 +3,4 @@ update_data = { age: 32, address: "沖縄" }
 
 user_data[:age] = 32,[:address] = "沖縄"
 
-p user_data
+puts user_data
